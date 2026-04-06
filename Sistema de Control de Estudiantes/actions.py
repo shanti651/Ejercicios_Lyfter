@@ -16,7 +16,6 @@ def add_student(students):
     student["english_grade"] = ask_grades("english_grade")
     student["socials_grade"] = ask_grades("socials_grade")
     student["science_grade"] = ask_grades("science_grade")
-
     return student
         
 def ask_grades(grade):
@@ -67,14 +66,6 @@ def top_three_students(students):
                 print(f"Top 3 = {row['name']}, Average Grade is ({top_three})")
 
 
-               
-                
-
-                
-                
-
-
-
 def average_note(students):
     total_grades = 0
     with open("Students.csv", newline='', encoding='utf-8') as file:
@@ -87,12 +78,18 @@ def average_note(students):
             print(average_grade)
             total_grades = average_grade + total_grades
         total_average_grade = total_grades / total_lines
-        return total_average_grade
+        return total_average_grade 
+    
+def failed_students(students):
+    fail = []
+    with open("Students.csv", newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if float(row["spanish_grade"]) < 70 or float(row["english_grade"]) < 70 or float(row["socials_grade"]) < 70 or float(row["science_grade"]) < 70:
+                fail.append(row["name"])
+                print(f"{row["name"]} is failed")
 
-   # for x in students:
-       # average_grade = (x["spanish_grade"]+x["english_grade"]+x["socials_grade"]+x["science_grade"])/4
-       
-   # return average_grade   
+        print(fail)
 
 
 

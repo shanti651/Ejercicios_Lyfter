@@ -1,10 +1,10 @@
-from actions import add_student, info_students, export_data, top_three_students, average_note
+from actions import add_student, info_students, export_data, top_three_students, average_note, failed_students
 from data import export_data
 
 students = []
 def system():
     while True:
-        option = input("What do you want to do? ADD STUDENT = a\n IFORMATION ABOUT STUDENT = b\n TOP 3 = c\n AVERAGE NOTES = d\n EXPORT DATA = e\n EXIT = z") 
+        option = input("What do you want to do? ADD STUDENT = a\n IFORMATION ABOUT STUDENT = b\n TOP 3 = c\n AVERAGE NOTES = d\n EXPORT DATA = e\n FAIL STUDENTS = f\n EXIT = z") 
         if option == "z":
             break
 
@@ -27,6 +27,9 @@ def system():
         elif option == "e":
             print(students)
             export_data(students)
+
+        elif option == "f":
+            failed_students(students)
 
 
         else:
