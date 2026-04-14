@@ -85,9 +85,9 @@ def failed_students(students):
     with open("Students.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         for row in reader:
-            if float(row["spanish_grade"]) < 70 or float(row["english_grade"]) < 70 or float(row["socials_grade"]) < 70 or float(row["science_grade"]) < 70:
+            if float(row["spanish_grade"]) < 60 or float(row["english_grade"]) < 60 or float(row["socials_grade"]) < 60 or float(row["science_grade"]) < 60:
                 fail.append(row["name"])
-                print(f"{row["name"]} is failed")
+                print(f"{row["name"]} of class {row["class_number"]} is failed")
 
         print(fail)
 
