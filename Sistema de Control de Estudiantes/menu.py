@@ -1,8 +1,9 @@
 from actions import add_student, info_students, export_data, top_three_students, average_note, failed_students
 from data import export_data, import_data
 
-students = []
+
 def system():
+    students = []
     while True:
         option = input("What do you want to do? ADD STUDENT = a\n IFORMATION ABOUT STUDENT = b\n TOP 3 = c\n AVERAGE NOTES = d\n EXPORT DATA = e\n FAIL STUDENTS = f\n IMPORT DATA = g\n EXIT = z").strip().lower()
         if option == "z":
