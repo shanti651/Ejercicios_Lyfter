@@ -1,20 +1,24 @@
 from data2 import export_data
 
 import csv
-
 class Student:
 
-    def __init__(self):
-        self.name = ""
-        self.class_number = ""
-        self.spanish_grade = 0
-        self.english_grade = 0
-        self.socials_grade = 0
-        self.science_grade = 0
+    def __init__(
+        self,
+        name="",
+        class_number="",
+        spanish_grade=0,
+        english_grade=0,
+        socials_grade=0,
+        science_grade=0
+    ):
+        self.name = name
+        self.class_number = class_number
+        self.spanish_grade = spanish_grade
+        self.english_grade = english_grade
+        self.socials_grade = socials_grade
+        self.science_grade = science_grade
 
-    def __init__(self):
-        self.name = ""
-        self.class_number = ""
 
     def ask_data(self):
 
