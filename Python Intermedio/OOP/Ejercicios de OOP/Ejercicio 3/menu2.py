@@ -10,11 +10,6 @@ def system():
             break
 
         elif option == "a":
-            student = Student()
-            student.ask_data()
-            student.ask_grades()
-
-            students = []
 
             s = Student()
             s.ask_data()
