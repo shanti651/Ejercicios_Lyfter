@@ -1,10 +1,10 @@
 def decorador(funcion_original):
-    def funcion_decorada(nombre):
-        print(f"Parámetro: {nombre}")
-        resultado = funcion_original(nombre)
-        print(f"La función retorno: {resultado}")
+    def funcion_copia(*args, **kwargs):
+        print(f"Parámetros recibidos: args={args}, kwargs={kwargs}")
+        resultado = funcion_original(*args, **kwargs)
+        print(f"La función retornó: {resultado}")
         return resultado
-    return funcion_decorada
+    return funcion_copia
 
 
 @decorador
