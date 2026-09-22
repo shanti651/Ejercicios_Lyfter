@@ -8,3 +8,4 @@ def bubble_sort(list):
 my_list = [10, 3, 6, 7, 2, 1, 9]
 bubble_sort(my_list)
 print(my_list)
+print(my_list)
