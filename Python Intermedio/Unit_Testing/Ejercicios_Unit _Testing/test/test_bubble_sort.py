@@ -1,4 +1,5 @@
 import random
+import pytest
 from bubble_sort1 import bubble_sort1
 
 def test_bubble_sort_with_small_list():
@@ -26,8 +27,10 @@ def test_bubble_sort_with_empty_list():
     assert result == []
 
 def test_bubble_sort_with_a_parameter_that_is_not_a_list():
-    dictionary = {2,7,4,6}
-
-    result = bubble_sort1(dictionary) 
+    dictionary = {"a":2, "b": 7, "c": 4,"d":6}
     
-    assert result == {2,4,6,7}
+    with pytest.raises(KeyError):
+        bubble_sort1(dictionary) 
+    
+    
+
