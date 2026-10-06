@@ -1,0 +1,7 @@
+# Ignorar todas las carpetas __pycache__ y archivos .pyc de Python
+**/__pycache__/
+*.pyc
+
+# Ignorar la carpeta específica en la que estás trabajando
+Gestor\ de\ Finanzas\ Personales/
+.pytest_cache/
